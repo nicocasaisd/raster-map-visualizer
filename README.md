@@ -1,6 +1,26 @@
 # Satellite Tile Visualization 
 
-This project is a small MVP for visualizing satellite map tiles and experimenting with a basic detection overlay pipeline.
+This project is a small tool for visualizing satellite map tiles and experimenting with a basic detection overlay pipeline.
+
+## Directory Structure
+
+```text
+raster-map-visualizer/
+├── backend/
+│   └── app/
+│       ├── config.py
+│       ├── main.py
+│       ├── routes/
+│       │   ├── overlay.py
+│       │   └── tiles.py
+│       └── services/
+│           ├── detection.py
+│           └── provider.py
+└── frontend/
+    ├── index.html
+    ├── app.js
+    └── styles.css
+```
 
 ## Backend
 
