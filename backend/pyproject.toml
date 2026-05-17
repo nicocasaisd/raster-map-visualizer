@@ -1,0 +1,14 @@
+[project]
+name = "sat-tiles-api"
+version = "0.1.0"
+description = "Phase 1 tile proxy for Satellogic raster tiles"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.0",
+    "numpy>=2.1.0",
+    "opencv-python>=4.10.0.84",
+    "python-dotenv>=1.0.1",
+    "requests>=2.32.3",
+    "uvicorn>=0.34.0",
+]

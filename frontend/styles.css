@@ -1,0 +1,123 @@
+:root {
+  color-scheme: light;
+  --sidebar-width: 280px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  background: #0a131d;
+  font-family: "Segoe UI", "Noto Sans", sans-serif;
+}
+
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: var(--sidebar-width);
+  z-index: 1100;
+  padding: 18px 16px;
+  color: #eaf3fa;
+  background: linear-gradient(180deg, #0e1b28 0%, #0b1621 100%);
+  border-right: 1px solid rgba(205, 224, 239, 0.22);
+  overflow-y: auto;
+}
+
+.sidebar h1 {
+  margin: 0 0 16px;
+  font-size: 0.98rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.control-card,
+.band-control {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  color: #eaf3fa;
+  background: rgba(19, 31, 42, 0.72);
+  border: 1px solid rgba(202, 221, 236, 0.25);
+  border-radius: 10px;
+}
+
+.control-card h2,
+.band-control h2 {
+  margin: 0;
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.control-card label,
+.band-control label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+
+.control-card input,
+.band-control input {
+  accent-color: #7ec2ff;
+}
+
+.band-control.disabled {
+  opacity: 0.55;
+}
+
+.map-shell {
+  position: fixed;
+  inset: 0 0 0 var(--sidebar-width);
+}
+
+#map {
+  position: absolute;
+  inset: 0;
+}
+
+.loading-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  gap: 12px;
+  align-content: center;
+  background: radial-gradient(circle at 50% 30%, rgba(26, 44, 58, 0.4), rgba(8, 14, 20, 0.82));
+  backdrop-filter: blur(3px);
+  color: #f0f6fa;
+  z-index: 1200;
+  transition: opacity 260ms ease;
+}
+
+.loading-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.spinner {
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  border: 4px solid rgba(220, 233, 243, 0.22);
+  border-top-color: #ffffff;
+  animation: spin 0.85s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

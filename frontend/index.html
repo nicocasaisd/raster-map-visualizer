@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Map</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <aside id="sidebar" class="sidebar" aria-label="Map controls">
+      <h1>Controls</h1>
+      <section id="view-control" class="control-card" aria-label="View options">
+        <h2>View</h2>
+        <label><input id="overlay-toggle" type="checkbox" /> Detection overlay</label>
+      </section>
+
+      <section id="band-control" class="band-control" aria-label="Band selection">
+        <h2>Bands</h2>
+        <label><input type="checkbox" value="1" checked /> Red</label>
+        <label><input type="checkbox" value="2" checked /> Green</label>
+        <label><input type="checkbox" value="3" checked /> Blue</label>
+      </section>
+    </aside>
+
+    <main id="map-shell" class="map-shell" aria-label="Map area">
+      <div id="loading-overlay" class="loading-overlay" role="status" aria-live="polite">
+        <div class="spinner"></div>
+      </div>
+
+      <!-- Leaflet renders map tiles inside this container. -->
+      <section id="map" aria-label="Satellite map"></section>
+    </main>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
