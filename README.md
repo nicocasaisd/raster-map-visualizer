@@ -2,6 +2,10 @@
 
 This project is a small tool for visualizing satellite map tiles and experimenting with a basic detection overlay pipeline.
 
+## Demo
+https://github.com/user-attachments/assets/5a790c50-14c4-4994-95a8-c00a74f88adc
+
+
 ## Directory Structure
 
 ```text
